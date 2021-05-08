@@ -1,0 +1,90 @@
+                          <!-- ESTO ES CON IONIC -->
+<ion-grid *ngIf="!isOk">
+  <ion-row class="notfound">
+    <ion-col>
+      <ion-label class="titulo404">
+        4 0 4 - NOT FOUND
+      </ion-label>
+      <ion-label>
+        Intente con otro amiibo o revise si su nombre está bien escrito
+      </ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div *ngIf="apiResponse!=undefined">
+  <ion-grid
+    class="response"
+    *ngFor="let amiibo of apiResponse.amiibo"
+    style="color: white"
+  >
+  <!-- --------------- -->
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          Personaje {{amiibo.character}}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+          <img  src="{{ amiibo.image }}" width="15%">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          Nombre del Amiibo: {{amiibo.name}}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          Serie del Amiibo: {{amiibo.amiiboSeries}}
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+      <ion-list-header lines="inset">
+        <ion-label>Lanzamientos:</ion-label>
+      </ion-list-header>
+
+      <ion-row *ngIf="amiibo.release.au">
+        <ion-col>
+          <ion-label color="primary">
+            Lanzamiento en Australia: {{ amiibo.release.au }}
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="amiibo.release.eu">
+        <ion-col>
+          <ion-label color="primary">
+            Lanzamiento en Europa: {{ amiibo.release.eu }}
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="amiibo.release.jp">
+        <ion-col>
+          <ion-label color="primary">
+            Lanzamiento en Japón: {{ amiibo.release.jp }}
+          </ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="amiibo.release.na">
+        <ion-col>
+          <ion-label color="primary">
+            Lanzamiento en América: {{ amiibo.release.na }}
+          </ion-label>
+        </ion-col>
+      </ion-row>
+  <!-- --------------- -->
+  </ion-grid>
+</div>
+

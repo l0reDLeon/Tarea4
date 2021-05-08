@@ -1,0 +1,21 @@
+.main{
+  background-color:black;
+}
+
+.centro{
+  text-align: center;
+}
+
+.notfound{
+  background-color: #ff4554;
+  text-align:center;
+  color:lavender;
+}
+
+.titulo404{
+  font-size: x-large;
+}
+
+.response{
+  background-color: cadetblue;
+}
