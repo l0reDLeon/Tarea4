@@ -11,4 +11,4 @@ import { FormsModule } from '@angular/forms';
     exports: [DisplayComponent], // Import all component here
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class DsiplayModule { }
+export class DisplayModule { }
