@@ -22,6 +22,7 @@
     <ion-col>
     </ion-col>
     <ion-col>
+      <ion-label position="floating">Escribe un nombre</ion-label>
       <ion-input
         class="form-control"
         type="text"
@@ -30,11 +31,11 @@
         style="
           font-size: larger;
           height: 40px;
-          width: 30%;
+          width: 80%;
           margin-left: auto;
-          margin-right: auto;"
+          margin-right: auto;
+          background-color: #8c8c8c;"
         required
-        placeholder="Escribe un nombre"
         [(ngModel)]="urlApi"
       >
       </ion-input>
@@ -49,11 +50,20 @@
         Buscar Amiibo
       </ion-button>
     </ion-col>
+
+    <!-- <ion-tab-button tab="display" class="btn btn-outline-success" (click)="send()" style="font-size: x-large">
+      Buscar Amiibo
+    </ion-tab-button> -->
   </ion-row>
+</ion-grid>
+
+<ion-grid>
+
 
   <ion-row>
     <ion-col>
       <display nombre={{nombre}}></display>
     </ion-col>
   </ion-row>
+
 </ion-grid>
